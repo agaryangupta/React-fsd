@@ -38,6 +38,13 @@ export default function TextForm(props) {
            <button className='btn btn-primary' style={{ margin: "5px" }} onClick={handleCopy}>Copy Text</button>
         </div>
       </div>
+      <div className='container my-3'>
+        <h2>Yout text summary</h2>
+        <p>{text.split(" ").length} words and {text.length} characters</p>
+        <p>{(0.008)*text.split(" ").length} Minutes read</p>
+        <h2>Preview</h2>
+        <p>{text.length>0?text:"Enter something in the textbox above to preview it"}</p>
+      </div>
     </div>
   )
 }
